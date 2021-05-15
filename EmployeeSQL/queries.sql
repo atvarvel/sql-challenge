@@ -17,5 +17,20 @@ FROM employees AS e
 INNER JOIN dept_emp AS de ON de.emp_no = e.emp_no
 INNER JOIN departments AS d ON d.dept_no = de.dept_no;
 
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name = 'Hercules' and last_name LIKE 'B%';
+
+SELECT e.emp_no, e.first_name, e.last_name, d.dept_name
+FROM employees AS e
+INNER JOIN dept_emp AS de ON de.emp_no = e.emp_no
+INNER JOIN departments AS d ON d.dept_no = de.dept_no
+WHERE d.dept_name = 'Sales';
+
+SELECT e.emp_no, e.first_name, e.last_name, d.dept_name
+FROM employees AS e
+INNER JOIN dept_emp AS de ON de.emp_no = e.emp_no
+INNER JOIN departments AS d ON d.dept_no = de.dept_no
+WHERE d.dept_name = 'Sales' or d.dept_name = 'Development';
 
 
