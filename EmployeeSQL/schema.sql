@@ -1,3 +1,4 @@
+-- Create tables for each csv file
 CREATE TABLE departments (
 	dept_no VARCHAR NOT NULL,
 	dept_name VARCHAR NOT NULL,
